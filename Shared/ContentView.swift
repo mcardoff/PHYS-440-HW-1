@@ -65,9 +65,6 @@ struct ContentView: View {
                         .padding(.bottom,30)
                         
                     }
-
-                
-                
             }
             
             Button("Calculate", action: {Task.init { await self.calculateSphere()}})

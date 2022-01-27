@@ -11,19 +11,18 @@ class Sphere: NSObject, ObservableObject {
     
     
     var radius = 1.0
-    var center = (x:
-                    0.0, y:0.0, z:0.0)
+    var center = (x:0.0, y:0.0, z:0.0)
     @Published var volume = 0.0
     @Published var surfaceArea = 0.0
     @Published var volumeText = ""
     @Published var surfaceAreaText = ""
     @Published var enableButton = true
     
+    
     func initWithRadius(radius: Double) async -> Bool {
         
         self.radius = radius
        
-            
             let _ = await withTaskGroup(of:  Void.self) { taskGroup in
                 taskGroup.addTask { let _ = await self.calculateArea(radius:radius)}
                 taskGroup.addTask { let _ = await self.calculateSurfaceArea(radius: radius)}
