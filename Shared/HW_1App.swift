@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct HW_1App: App {
+struct Circle_With_Unit_TestsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(minWidth: 300, minHeight: 400)
         }
     }
 }
