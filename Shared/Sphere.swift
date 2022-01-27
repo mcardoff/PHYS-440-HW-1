@@ -12,10 +12,12 @@ class Sphere: NSObject, ObservableObject {
     // necessary variables for calculating and displaying everything on screen
     var radius = 1.0
     var center = (x:0.0, y:0.0, z:0.0)
+    // updated when initWithRadius is called
     @Published var volume = 0.0
     @Published var surfaceArea = 0.0
     @Published var volumeText = ""
     @Published var surfaceAreaText = ""
+    // changed in contentView
     @Published var enableButton = true
     
     
@@ -85,11 +87,16 @@ class Sphere: NSObject, ObservableObject {
         }
     }
     
-    
+    /// newVolumeValue
+    /// Setter function for the volume field of the sphere class
+    /// - Parameter volume: New volume value to update class
     @MainActor func newVolumeValue(volume: Double){
         self.volume = volume
     }
     
+    /// newSurfaceAreaValue
+    /// Setter function for the surface area field of the sphere class
+    /// - Parameter surfaceArea: New surface area value to update class
     @MainActor func newSurfaceAreaValue(surfaceArea: Double){
         self.surfaceArea = surfaceArea
     }
@@ -103,7 +110,7 @@ class Sphere: NSObject, ObservableObject {
     
     /// updateSurfaceArea
     /// Update the surfaceAreaText variable
-    /// - Parameter volumeTextString: String converted from a Double which contains the calculated surface area
+    /// - Parameter surfaceAreaTextString: String converted from a Double which contains the calculated surface area
     @MainActor func updateSurfaceArea(surfaceAreaTextString:String){
         surfaceAreaText = surfaceAreaTextString
     }
