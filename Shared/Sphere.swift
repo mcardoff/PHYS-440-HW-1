@@ -23,17 +23,11 @@ class Sphere: NSObject, ObservableObject {
         
         self.radius = radius
        
-            let _ = await withTaskGroup(of:  Void.self) { taskGroup in
+        let _ = await withTaskGroup(of:  Void.self) { taskGroup in
                 taskGroup.addTask { let _ = await self.calculateVolume(radius:radius)}
                 taskGroup.addTask { let _ = await self.calculateSurfaceArea(radius: radius)}
-            
-        }
-            
+            }
             await setButtonEnable(state: true)
-                                                 
-       
-        
-
         return true
         
     }

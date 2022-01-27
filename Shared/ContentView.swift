@@ -18,20 +18,13 @@ struct ContentView: View {
             Text("Radius")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("Enter Radius", text: $radiusString, onCommit: {Task.init {await self.calculateSphere()}})
+            Text("\(sphereModel.radius, specifier: "%0.2f")")
                 .padding(.horizontal)
                 .frame(width: 100)
                 .padding(.top, 0)
                 .padding(.bottom, 30)
             HStack {
                 VStack{
-            Text("Volume")
-                .padding(.bottom, 0)
-            TextField("", text: $sphereModel.volumeText)
-                .padding(.horizontal)
-                .frame(width: 100)
-                .padding(.top, 0)
-                .padding(.bottom,30)
             
         }
         VStack{
@@ -46,15 +39,6 @@ struct ContentView: View {
             }
             }
             HStack{
-                VStack{
-            Text("Surface Area")
-                .padding(.bottom, 0)
-            TextField("", text: ( $sphereModel.surfaceAreaText))
-                .padding(.horizontal)
-                .frame(width: 100)
-                .padding(.top, 0)
-                .padding(.bottom, 30)
-                }
                 VStack{
                     Text("Surface Area")
                         .padding(.bottom, 0)
