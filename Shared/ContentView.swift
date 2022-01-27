@@ -18,7 +18,7 @@ struct ContentView: View {
             Text("Radius")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("Enter Radius", text: $radiusString, onCommit: {Task.init {await self.calculateCircle()}})
+            TextField("Enter Radius", text: $radiusString, onCommit: {Task.init {await self.calculateSphere()}})
                 .padding(.horizontal)
                 .frame(width: 100)
                 .padding(.top, 0)
@@ -70,7 +70,7 @@ struct ContentView: View {
                 
             }
             
-            Button("Calculate", action: {Task.init { await self.calculateCircle()}})
+            Button("Calculate", action: {Task.init { await self.calculateSphere()}})
                 .padding(.bottom)
                 .padding()
                 .disabled(sphereModel.enableButton == false)
@@ -80,15 +80,11 @@ struct ContentView: View {
         
     }
     
-    func calculateCircle() async {
+    func calculateSphere() async {
         
         sphereModel.setButtonEnable(state: false)
         
         let _ : Bool = await sphereModel.initWithRadius(radius: Double(radiusString)!)
-        
-        
-    
-
 }
     
 }

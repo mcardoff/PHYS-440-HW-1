@@ -69,56 +69,36 @@ class Sphere: NSObject, ObservableObject {
     }
     
     @MainActor func setButtonEnable(state: Bool){
-        
-        
         if state {
-            
             Task.init {
                 await MainActor.run {
-                    
-                    
                     self.enableButton = true
                 }
             }
-            
-            
-                
         }
         else{
-            
             Task.init {
                 await MainActor.run {
-                    
-                    
                     self.enableButton = false
                 }
             }
-                
         }
-        
     }
     
 
     @MainActor func updateVolume(volumeTextString: String){
-        
         volumeText = volumeTextString
-        
     }
     
     @MainActor func newVolumeValue(volume: Double){
-        
         self.volume = volume
-        
     }
     
     @MainActor func newSurfaceAreaValue(surfaceArea: Double){
-        
         self.surfaceArea = surfaceArea
-        
     }
     
     @MainActor func updateSurfaceArea(surfaceAreaTextString:String){
-        
         surfaceAreaText = surfaceAreaTextString
     }
 }
