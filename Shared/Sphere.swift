@@ -24,7 +24,7 @@ class Sphere: NSObject, ObservableObject {
         self.radius = radius
        
             let _ = await withTaskGroup(of:  Void.self) { taskGroup in
-                taskGroup.addTask { let _ = await self.calculateArea(radius:radius)}
+                taskGroup.addTask { let _ = await self.calculateVolume(radius:radius)}
                 taskGroup.addTask { let _ = await self.calculateSurfaceArea(radius: radius)}
             
         }
@@ -38,7 +38,7 @@ class Sphere: NSObject, ObservableObject {
         
     }
     
-    func calculateArea(radius: Double) async -> Double {
+    func calculateVolume(radius: Double) async -> Double {
         
         // V = (4/3) * pi * r^3
         
