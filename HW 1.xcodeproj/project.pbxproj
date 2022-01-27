@@ -17,6 +17,8 @@
 		2CAA5CC3279B6C6E00939CE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5C99279B6C6B00939CE6 /* ContentView.swift */; };
 		2CAA5CC4279B6C6E00939CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA5C9A279B6C6D00939CE6 /* Assets.xcassets */; };
 		2CAA5CC5279B6C6E00939CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA5C9A279B6C6D00939CE6 /* Assets.xcassets */; };
+		2CAA5CDB27A235E300939CE6 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5CDA27A235E300939CE6 /* Sphere.swift */; };
+		2CAA5CDC27A235E300939CE6 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5CDA27A235E300939CE6 /* Sphere.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		2CAA5CB8279B6C6E00939CE6 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAA5CBC279B6C6E00939CE6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2CAA5CBE279B6C6E00939CE6 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		2CAA5CDA27A235E300939CE6 /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2CAA5C98279B6C6B00939CE6 /* HW_1App.swift */,
+				2CAA5CDA27A235E300939CE6 /* Sphere.swift */,
 				2CAA5C99279B6C6B00939CE6 /* ContentView.swift */,
 				2CAA5C9A279B6C6D00939CE6 /* Assets.xcassets */,
 			);
@@ -301,6 +305,7 @@
 			files = (
 				2CAA5CC2279B6C6E00939CE6 /* ContentView.swift in Sources */,
 				2CAA5CC0279B6C6E00939CE6 /* HW_1App.swift in Sources */,
+				2CAA5CDB27A235E300939CE6 /* Sphere.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +315,7 @@
 			files = (
 				2CAA5CC3279B6C6E00939CE6 /* ContentView.swift in Sources */,
 				2CAA5CC1279B6C6E00939CE6 /* HW_1App.swift in Sources */,
+				2CAA5CDC27A235E300939CE6 /* Sphere.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
