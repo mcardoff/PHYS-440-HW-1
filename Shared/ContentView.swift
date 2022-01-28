@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject private var sphereModel = Sphere()
+    @ObservedObject private var cubeModel = Cube()
     @State var radiusString = "1.0"
     
     var body: some View {

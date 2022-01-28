@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C56037727A321E1009BB96F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56037627A321E1009BB96F /* Shape.swift */; };
 		2C56037827A321E1009BB96F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56037627A321E1009BB96F /* Shape.swift */; };
+		2C56037A27A39639009BB96F /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56037927A39639009BB96F /* Cube.swift */; };
+		2C56037B27A39639009BB96F /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56037927A39639009BB96F /* Cube.swift */; };
 		2CAA5CB1279B6C6E00939CE6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5CB0279B6C6E00939CE6 /* Tests_iOS.swift */; };
 		2CAA5CB3279B6C6E00939CE6 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5CB2279B6C6E00939CE6 /* Tests_iOSLaunchTests.swift */; };
 		2CAA5CBD279B6C6E00939CE6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5CBC279B6C6E00939CE6 /* Tests_macOS.swift */; };
@@ -42,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2C56037627A321E1009BB96F /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		2C56037927A39639009BB96F /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		2CAA5C98279B6C6B00939CE6 /* HW_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_1App.swift; sourceTree = "<group>"; };
 		2CAA5C99279B6C6B00939CE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CAA5C9A279B6C6D00939CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 				2CAA5CDA27A235E300939CE6 /* Sphere.swift */,
 				2C56037627A321E1009BB96F /* Shape.swift */,
 				2CAA5C99279B6C6B00939CE6 /* ContentView.swift */,
+				2C56037927A39639009BB96F /* Cube.swift */,
 				2CAA5C9A279B6C6D00939CE6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -308,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CAA5CC2279B6C6E00939CE6 /* ContentView.swift in Sources */,
+				2C56037A27A39639009BB96F /* Cube.swift in Sources */,
 				2CAA5CC0279B6C6E00939CE6 /* HW_1App.swift in Sources */,
 				2CAA5CDB27A235E300939CE6 /* Sphere.swift in Sources */,
 				2C56037727A321E1009BB96F /* Shape.swift in Sources */,
@@ -319,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CAA5CC3279B6C6E00939CE6 /* ContentView.swift in Sources */,
+				2C56037B27A39639009BB96F /* Cube.swift in Sources */,
 				2CAA5CC1279B6C6E00939CE6 /* HW_1App.swift in Sources */,
 				2CAA5CDC27A235E300939CE6 /* Sphere.swift in Sources */,
 				2C56037827A321E1009BB96F /* Shape.swift in Sources */,

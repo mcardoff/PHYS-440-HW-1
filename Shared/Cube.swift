@@ -1,27 +1,27 @@
 //
-//  Sphere.swift
+//  Cube.swift
 //  HW 1
 //
-//  Created by Michael Cardiff on 1/26/22.
+//  Created by Michael Cardiff on 1/27/22.
 //
 
 import SwiftUI
 
-class Sphere: Shape {
+class Cube: Shape {
     
     // necessary variables for calculating and displaying everything on screen
-    var radius = 1.0
-    var center = (x:0.0, y:0.0, z:0.0)    
+    var sideLength = 1.0
+    var center = (x:0.0, y:0.0, z:0.0)
     
     /// initWithRadius
     /// initializes the sphere object with a given radius, as well as calculates its area
     ///  - Parameter radius: Double precision value of the radius, defaults to 1
-    func initWithRadius(radius: Double) async -> Bool {
+    func initWithSideLength(sideLength: Double) async -> Bool {
         
-        self.radius = radius
+        self.sideLength = sideLength
             let _ = await withTaskGroup(of: Void.self) { taskGroup in
-                taskGroup.addTask { let _ = await self.calculateVolume(param: radius)}
-                taskGroup.addTask { let _ = await self.calculateSurfaceArea(param: radius)}
+                taskGroup.addTask { let _ = await self.calculateVolume(param: sideLength)}
+                taskGroup.addTask { let _ = await self.calculateSurfaceArea(param: sideLength)}
         }
             await setButtonEnable(state: true)
         return true
@@ -29,13 +29,13 @@ class Sphere: Shape {
     
     /// calculateVolume
     /// Calculates the sphere's volume using the analytic formula
-    ///  - Parameter radius: Double precision value of the radius, defaults to 1
+    ///  - Parameter sideLength: Double precision value of the side length, defaults to 1
     override func calculateVolume(param: Double) async -> Double {
         
-        // V = (4/3) * pi * r^3
-        let radius = param
+        // V = l^3
+        let sideLength = param
         
-        let calculatedVolume = (4.0/3.0) * Double.pi * pow(radius,3)
+        let calculatedVolume = pow(radius,3)
         let newVolumeText = String(format: "%7.5f", calculatedVolume)
         
         await updateVolume(volumeTextString: newVolumeText)
@@ -62,3 +62,4 @@ class Sphere: Shape {
         
     }
 }
+
