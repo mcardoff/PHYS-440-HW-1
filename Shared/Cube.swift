@@ -35,7 +35,7 @@ class Cube: Shape {
         // V = l^3
         let sideLength = param
         
-        let calculatedVolume = pow(radius,3)
+        let calculatedVolume = pow(sideLength,3)
         let newVolumeText = String(format: "%7.5f", calculatedVolume)
         
         await updateVolume(volumeTextString: newVolumeText)
@@ -46,13 +46,13 @@ class Cube: Shape {
     
     /// calculateSurfaceArea
     /// Calculates the sphere's surface area using the analytic formula
-    ///  - Parameter radius: Double precision value of the radius, defaults to 1
+    ///  - Parameter sideLength: Double precision value of the side length, defaults to 1
     override func calculateSurfaceArea(param: Double) async -> Double {
         
-        // SA = 4 * Pi * r^2
-        let radius = param
+        // SA = 6 * l^2
+        let sideLength = param
         
-        let calculatedSurfaceArea = 4 * Double.pi * pow(radius,2)
+        let calculatedSurfaceArea = 6 * pow(sideLength,2)
         let newSurfaceAreaText = String(format: "%7.5f", calculatedSurfaceArea)
         
         await updateSurfaceArea(surfaceAreaTextString: newSurfaceAreaText)
