@@ -70,6 +70,54 @@ struct ContentView: View {
                 }
             }
             
+            HStack {
+                VStack{
+                    Text("Bounding Box Volume")
+                        .padding(.bottom, 0)
+                    TextField("",
+                              text: $sphereModel.boundingBoxVolText)
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                }
+                
+                VStack{
+                    Text("Volume")
+                        .padding(.bottom, 0)
+                    Text("\(sphereModel.boundingBoxVolume, specifier: "%.2f")")
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                    
+                }
+            }
+            
+            HStack {
+                VStack{
+                    Text("Bounding Box SA")
+                        .padding(.bottom, 0)
+                    TextField("",
+                              text: $sphereModel.boundingBoxSAText)
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                }
+                
+                VStack{
+                    Text("Bounding Box SA")
+                        .padding(.bottom, 0)
+                    Text("\(sphereModel.boundingBoxSA, specifier: "%.2f")")
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                    
+                }
+            }
+            
             Button("Calculate", action: {Task.init { await self.calculateSphere()}})
                 .padding(.bottom)
                 .padding()
