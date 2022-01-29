@@ -25,18 +25,15 @@ struct ContentView: View {
                 .padding(.bottom, 30)
             HStack {
                 VStack{
-            
-        }
-        VStack{
-            Text("Volume")
-                .padding(.bottom, 0)
-            Text("\(sphereModel.volume, specifier: "%.2f")")
-                .padding(.horizontal)
-                .frame(width: 100)
-                .padding(.top, 0)
-                .padding(.bottom,30)
-                
-            }
+                    Text("Volume")
+                        .padding(.bottom, 0)
+                    Text("\(sphereModel.volume, specifier: "%.2f")")
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                    
+                }
             }
             HStack{
                 VStack{
@@ -47,8 +44,32 @@ struct ContentView: View {
                         .frame(width: 100)
                         .padding(.top, 0)
                         .padding(.bottom,30)
-                        
-                    }
+                    
+                }
+            }
+            HStack {
+                VStack{
+                    Text("Volume Bounding Box")
+                        .padding(.bottom, 0)
+                    Text("\(sphereModel.boundingBoxVolume, specifier: "%.2f")")
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                    
+                }
+            }
+            HStack{
+                VStack{
+                    Text("Surface Area Bounding Box")
+                        .padding(.bottom, 0)
+                    Text("\(sphereModel.boundingBoxSA, specifier: "%.2f")")
+                        .padding(.horizontal)
+                        .frame(width: 100)
+                        .padding(.top, 0)
+                        .padding(.bottom,30)
+                    
+                }
             }
             
             Button("Calculate", action: {Task.init { await self.calculateSphere()}})
