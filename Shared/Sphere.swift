@@ -12,6 +12,7 @@ class Sphere: Shape {
     // necessary variables for calculating and displaying everything on screen
     var radius = 1.0
     var center = (x:0.0, y:0.0, z:0.0)
+    // bounding box
     @Published var boundingBoxVolume = 0.0
     @Published var boundingBoxSA = 0.0
     @Published var boundingBoxVolText = ""
@@ -68,6 +69,9 @@ class Sphere: Shape {
         
     }
     
+    /// calculateBoundingBoxVol
+    /// Calculates the  volume of the sphere's bounding box using the analytic formula
+    ///  - Parameter radius: Double precision value of the radius, defaults to 1
     func calculateBoundingBoxVol(radius: Double) async -> Double {
         
         // V_BB = (2 * r) ^ 3
@@ -82,6 +86,9 @@ class Sphere: Shape {
         
     }
     
+    /// calculateBoundingBoxSA
+    /// Calculates the surface area of the spheres bounding box using the analytic formula
+    ///  - Parameter radius: Double precision value of the radius, defaults to 1
     func calculateBoundingBoxSA(radius: Double) async -> Double {
         
         // SA_BB = 6 * (2 * r) ^ 2
@@ -96,18 +103,30 @@ class Sphere: Shape {
         
     }
     
+    /// newBoundingBoxVol
+    /// Update the boundingBoxVol variable
+    /// - Parameter volume: String converted from a Double which contains the volume of the bounding box
     @MainActor func newBoundingBoxVolValue(volume: Double) {
         self.boundingBoxVolume = volume
     }
     
+    /// updateBoundingBoxVol
+    /// Update the boundingBoxVolText variable
+    /// - Parameter boundBoxTextString: String converted from a Double which contains the calculated volume of the bounding box
     @MainActor func updateBoundingBoxVol(boundBoxTextString: String){
         boundingBoxVolText = boundBoxTextString
     }
     
+    /// newBoundingBoxSAValue
+    /// Setter function for the boundingBoxSA field of the sphere class
+    /// - Parameter surfaceArea: New SA value to update class
     @MainActor func newBoundingBoxSAValue(surfaceArea: Double) {
         self.boundingBoxSA = surfaceArea
     }
     
+    /// updateBoundingBoxSurfaceArea
+    /// Update the boundingBoxSAText variable
+    /// - Parameter surfaceAreaTextString: String converted from a Double which contains the calculated surface area of the bounding box
     @MainActor func updateBoundingBoxSA(boundBoxTextString: String){
         boundingBoxSAText = boundBoxTextString
     }
